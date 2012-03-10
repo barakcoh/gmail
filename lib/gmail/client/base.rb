@@ -73,6 +73,8 @@ module Gmail
       def labels
         @labels ||= Labels.new(conn)
       end
+
+      attr_accessor :peek
       
       # Compose new e-mail.
       #

@@ -160,6 +160,11 @@ module Gmail
     def message
       @message ||= Mail.new(@gmail.mailbox(@mailbox.name) { 
         @gmail.conn.uid_fetch(uid, "RFC822")[0].attr["RFC822"] # RFC822
+
+        #request,part = 'RFC822','RFC822'
+        #request,part = 'BODY.PEEK[]','BODY[]' if @gmail.peek
+        #_body = @gmail.in_mailbox(@mailbox) { @gmail.conn.uid_fetch(uid, request)[0].attr[part] }
+        #@gmail.conn.uid_fetch(uid, request)[0].attr[part]
       })
     end
     alias_method :raw_message, :message
