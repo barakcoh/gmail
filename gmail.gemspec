@@ -19,7 +19,7 @@ begin
     gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
     gem.name          = "gmail"
     gem.require_paths = ["lib"]
-    gem.version       = Gmail::VERSION
+    gem.version       = Gmail::Version::STRING
     gem.add_dependency('mime', '>= 0.1')
     gem.add_dependency('mail', '>= 2.2.1')
     gem.add_dependency('gmail_xoauth', '>= 0.3.0')
