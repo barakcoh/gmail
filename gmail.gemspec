@@ -4,7 +4,7 @@ $:.unshift(File.expand_path('../lib', __FILE__))
 require 'gmail/version'
 
 begin
-  Gem::Specification.new do |gemspec|
+  Gem::Specification.new do |gem|
     gem.authors       = ["Chris Kowalik"]
     gem.email         = ["hris@nu7hat.ch"]
     gem.description   = %q{A Rubyesque interface to Gmail, with all the tools you will need.
